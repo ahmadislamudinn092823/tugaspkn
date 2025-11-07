@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kabupaten Sampang, Madura</title>
+  <meta name="description" content="Profil Kabupaten Sampang, Madura: geografi, budaya, makanan khas, kesenian, pantai, wisata, dan fakta unik." />
+  <style>
+    :root{
+      --bg:#0f172a;           /* slate-900 */
+      --card:#111827;         /* gray-900 */
+      --muted:#94a3b8;        /* slate-400 */
+      --text:#e5e7eb;         /* gray-200 */
+      --brand:#38bdf8;        /* sky-400 */
+      --brand-2:#22d3ee;      /* cyan-400 */
+      --accent:#f59e0b;       /* amber-500 */
+    }
+    
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.15), transparent 60%),
+                                        radial-gradient(1000px 500px at 10% -20%, rgba(56,189,248,.18), transparent 60%),
+                                        var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    header{
+      position:sticky;top:0;z-index:40;backdrop-filter:saturate(140%) blur(10px);
+      background:rgba(15,23,42,.7); border-bottom:1px solid rgba(148,163,184,.1);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
+    .brand .logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;font-weight:800;color:#001018;position:relative;overflow:hidden}
+    .brand .logo:after{content:"";position:absolute;inset:0;background:conic-gradient(from var(--rot,0deg),transparent 0 60%,rgba(255,255,255,.2) 60% 70%,transparent 70% 100%);animation:spin 6s linear infinite}
+    @keyframes spin{to{--rot:360deg}}
+    .nav a:hover{color:var(--brand)}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:36px 0;position:relative}
+    .hero:before{content:"";position:absolute;inset:-20px -40px -40px -40px;background:radial-gradient(600px 220px at 10% 0%, rgba(56,189,248,.12), transparent 60%), radial-gradient(600px 220px at 90% 0%, rgba(34,211,238,.12), transparent 60%);pointer-events:none}
+    .hero h1{font-size:clamp(26px,5vw,44px);line-height:1.1;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:10px;border:1px solid rgba(148,163,184,.18);background:#0b1220}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#082731;font-weight:700;border:none}
+    .btn:hover{transform:translateY(-1px);transition:.2s}
+
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+
+    section{padding:28px 0}
+    .section-title{font-size:22px;margin:0 0 14px}
+    .section-sub{color:var(--muted);margin:0 0 18px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); border:1px solid rgba(148,163,184,.14); border-radius:14px; padding:16px; position:relative; overflow:hidden}
+    .card:before{content:""; position:absolute; inset:-1px; border-radius:14px; padding:1px; background:linear-gradient(135deg, rgba(56,189,248,.25), rgba(34,211,238,.15), rgba(245,158,11,.2)); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none; opacity:.35}
+    .card:hover{transform:translateY(-2px); transition:.25s ease; box-shadow:0 8px 24px rgba(2,6,23,.35)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(148,163,184,.25);color:var(--muted);font-size:12px;background:rgba(2,6,23,.35)}
+
+    /* Fancy headings */
+    .section-title{position:relative; display:inline-block}
+    .section-title:after{content:""; position:absolute; left:0; bottom:-6px; width:42%; height:3px; background:linear-gradient(90deg, var(--brand), var(--brand-2), transparent)}
+
+    /* Table enhancements */
+    .table-wrap{overflow:auto; border-radius:12px; border:1px solid rgba(148,163,184,.18); background:linear-gradient(180deg, rgba(2,6,23,.7), rgba(2,6,23,.4))}
+    table.keren{width:100%; border-collapse:separate; border-spacing:0}
+    table.keren thead th{position:sticky; top:0; backdrop-filter:saturate(140%) blur(6px); background:rgba(15,23,42,.85); border-bottom:1px solid rgba(148,163,184,.28)}
+    table.keren th, table.keren td{border-right:1px solid rgba(148,163,184,.15)}
+    table.keren th:last-child, table.keren td:last-child{border-right:none}
+    table.keren th{padding:10px; font-weight:700; color:#dbeafe}
+    table.keren td{padding:10px}
+    table.keren tbody tr:nth-child(odd){background:rgba(148,163,184,.05)}
+    table.keren tbody tr:hover{background:rgba(56,189,248,.08)}
+    .badge{display:inline-flex; align-items:center; gap:6px; padding:4px 8px; border-radius:999px; font-size:12px; font-weight:700}
+    .badge.true{background:rgba(34,197,94,.18); color:#bbf7d0; border:1px solid rgba(34,197,94,.35)}
+    .badge.false{background:rgba(239,68,68,.18); color:#fecaca; border:1px solid rgba(239,68,68,.35)}
+    .icon{font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial; font-weight:900}
+
+    .list{margin:0;padding-left:18px;color:var(--text)}
+    .list li{margin:6px 0}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    @media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.gallery{grid-template-columns:1fr}}
+    .gallery .ph{aspect-ratio:16/10;border-radius:12px;background:linear-gradient(135deg, rgba(56,189,248,.2), rgba(34,211,238,.2));border:1px dashed rgba(148,163,184,.35);display:grid;place-items:center;color:#05222a;font-weight:700}
+
+    footer{border-top:1px solid rgba(148,163,184,.12); padding:24px 0; color:var(--muted); font-size:14px}
+
+    /* micro-interactions */
+    .reveal{opacity:0;transform:translateY(12px);transition:opacity .45s ease, transform .45s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <div>Kabupaten Sampang</div>
+          <div style="font-weight:400;color:var(--muted);font-size:12px">Pulau Madura, Jawa Timur</div>
+        </div>
+      </div>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a href="#tentang">Tentang</a>
+        <a href="#geografi">Geografi</a>
+        <a href="#budaya">Budaya</a>
+        <a href="#makanan">Makanan</a>
+        <a href="#kesenian">Kesenian</a>
+        <a href="#pantai">Pantai</a>
+        <a href="#fakta">Fakta</a>
+        <a href="#konflik">Konflik</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="tentang" class="hero">
+      <div>
+        <h1 class="reveal">Sampang: Ragam Pesona di Jantung Pulau Madura</h1>
+        <p class="reveal" style="transition-delay:.05s">Sampang merupakan salah satu kabupaten di Pulau Madura, Jawa Timur. Wilayahnya memadukan pesisir, perbukitan kapur, dan kawasan pertanian dengan kekayaan budaya Madura yang kental.</p>
+        <div class="cta reveal" style="transition-delay:.1s">
+          <a class="btn primary" href="#makanan">Jelajahi Kuliner</a>
+          <a class="btn" href="#pantai">Destinasi Pantai</a>
+        </div>
+      </div>
+      <div class="card reveal" style="transition-delay:.15s">
+        <h3>Ikhtisar Cepat</h3>
+        <div class="grid cols-2" style="margin-top:10px">
+          <div><div class="pill">Provinsi</div><div>Jawa Timur</div></div>
+          <div><div class="pill">Pulau</div><div>Madura</div></div>
+          <div><div class="pill">Ibu kota</div><div>Sampang</div></div>
+          <div><div class="pill">Luas</div><div>± 1.233 km²</div></div>
+          <div><div class="pill">Kode area</div><div>0323</div></div>
+          <div><div class="pill">Julukan</div><div>Kota Bahari</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="geografi">
+      <h2 class="section-title reveal">Geografi & Iklim</h2>
+      <p class="section-sub reveal" style="transition-delay:.05s">Topografi didominasi perbukitan kapur dengan pesisir di sisi selatan dan utara. Iklim tropis kering dengan musim kemarau panjang menjadikan budaya tandur dan pengelolaan air sangat penting.</p>
+      <div class="grid cols-3">
+        <div class="card reveal"><h3>Letak</h3><p>Berada di bagian tengah Pulau Madura, berbatasan dengan Bangkalan (barat), Pamekasan (timur), dan Laut Jawa (selatan-utara).</p></div>
+        <div class="card reveal" style="transition-delay:.05s"><h3>Curah Hujan</h3><p>Relatif rendah dibanding Jawa daratan; kemarau kering memengaruhi pola tanam dan jenis tanaman seperti jagung & tembakau.</p></div>
+        <div class="card reveal" style="transition-delay:.1s"><h3>Keunikan Alam</h3><p>Gua karst, pantai berpasir kecokelatan, serta lahan garam tradisional di beberapa titik pesisir.</p></div>
+      </div>
+    </section>
+
+    <section id="budaya">
+      <h2 class="section-title reveal">Budaya & Tradisi</h2>
+      <p class="section-sub reveal" style="transition-delay:.05s">Masyarakat Sampang menjunjung tinggi nilai kekeluargaan, religiusitas, dan adat Madura yang khas.</p>
+      <div class="grid cols-3">
+        <div class="card reveal"><h3>Bahasa</h3><p>Bahasa Madura dialek Sumenep–Pamekasan–Sampang, dengan kosakata khas pesisir.</p></div>
+        <div class="card reveal" style="transition-delay:.05s"><h3>Tradisi</h3><ul class="list"><li>Rokat Tase' (selamatan laut)</li><li>Rokat Bumi</li><li>Molodhan (peringatan Maulid)</li></ul></div>
+        <div class="card reveal" style="transition-delay:.1s"><h3>Kerajinan</h3><p>Batik Madura bernuansa terang, anyaman, dan seni ukir sederhana pada kayu lokal.</p></div>
+      </div>
+    </section>
+
+    <section id="makanan">
+      <h2 class="section-title reveal">Makanan Khas</h2>
+      <p class="section-sub reveal" style="transition-delay:.05s">Cita rasa gurih-pedas dengan bumbu rempah kuat menjadi ciri khas kuliner Sampang dan Madura pada umumnya.</p>
+      <div class="grid cols-3">
+        <div class="card reveal"><h3>Sate Madura</h3>
+          <img src="image/satemadura.jpg" alt="">
+          <p>Terkenal dengan bumbu kacang kental dan sambal kecap pedas. Variasi ayam dan kambing populer di Sampang.</p></div>
+        <div class="card reveal" style="transition-delay:.05s"><h3>Soto Sampang</h3>
+          <img src="image/sotosampang.jpg" alt="">
+          <p>Soto daging dengan kuah bening-gurih, disajikan dengan koya, perasan jeruk, dan sambal.</p></div>
+        <div class="card reveal" style="transition-delay:.1s"><h3>Nasi Serpang</h3>
+          <img src="image/nasi serpang.jpg" alt="">
+          <p>Nasi campur khas pesisir dengan lauk beragam: dendeng, sambal tongkol, serundeng, telur bumbu, dll.</p></div>
+        <div class="card reveal" style="transition-delay:.15s"><h3>Tajin Sobih</h3>
+          <img src="image/tajinsobih.jpg" alt="">
+          <p>Bubur manis dari ketan hitam dan santan, populer sebagai takjil.</p></div>
+        <div class="card reveal" style="transition-delay:.2s"><h3>Kaldu Kokot</h3>
+          <img src="image/kaldukokot.jpg" alt="">
+          <p>Sup kaki sapi dengan kacang hijau, kuah rempah yang pekat dan menghangatkan.</p></div>
+        <div class="card reveal" style="transition-delay:.25s"><h3>Lontong Kupang</h3>
+          <img src="image/lontongkupang.jpg" alt="">
+          <p>Olahan kerang kecil (kupang) dengan kuah segar, petis, dan perasan jeruk nipis.</p></div>
+      </div>
+    </section>
+
+    <section id="kesenian">
+      <h2 class="section-title reveal">Kesenian Daerah</h2>
+      <div class="grid cols-3">
+        <div class="card reveal"><h3>Karapan Sapi</h3><p>Ikon budaya Madura. Di Sampang, karapan menjadi ajang silaturahmi dan kebanggaan desa.</p></div>
+        <div class="card reveal" style="transition-delay:.05s"><h3>Macapat & Mamaca</h3><p>Tradisi tembang dan pembacaan naskah beraksara pegon untuk hikmah dan nasihat.</p></div>
+        <div class="card reveal" style="transition-delay:.1s"><h3>Hadrah & Saman Lokal</h3><p>Bernuansa religius, sering hadir pada perayaan Maulid dan hajatan.</p></div>
+      </div>
+    </section>
+
+    <section id="pantai">
+      <h2 class="section-title reveal">Pantai dan Wisata Alam</h2>
+      <p class="section-sub reveal" style="transition-delay:.05s">Garis pantai Sampang menawarkan panorama matahari terbenam yang hangat, serta spot kuliner laut sederhana namun autentik.</p>
+      <div class="gallery">
+        <div class="ph reveal">Pantai Camplong
+          <img src="image/pantai-camplong.jpg" alt="">
+        </div>
+        <div class="ph reveal" style="transition-delay:.05s">Pantai Nepa
+          <img src="image/pantainepa.jpg" alt="">
+        </div>
+        <div class="ph reveal" style="transition-delay:.1s">Hutan Kera Nepa
+          <img src="image/hutannepa.jpg" alt="">
+        </div>
+        <div class="ph reveal" style="transition-delay:.15s">Pantai Lon Malang
+          <img src="image/lonmalang.jpg" alt="">
+        </div>
+        <div class="ph reveal" style="transition-delay:.2s">Pantai Jodoh
+          <img src="image/pantaijodoh.jpg" alt="">
+        </div>
+        <div class="ph reveal" style="transition-delay:.25s">Lahan Garam
+          <img src="image/garamsampang.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="fakta">
+      <h2 class="section-title reveal">Fakta Unik</h2>
+      <div class="grid cols-3">
+        <div class="card reveal"><h3>Dialek & Sapaan</h3><p>Penggunaan sapaan khas seperti ben, tak, bhâ'-bhâ' menjadi identitas lokal.</p></div>
+        <div class="card reveal" style="transition-delay:.05s"><h3>Kuliner Pedas</h3><p>Sambal terasi dan cabe rawit mendominasi; pedas dianggap meningkatkan selera makan.</p></div>
+        <div class="card reveal" style="transition-delay:.1s"><h3>Religius</h3><p>Banyak pesantren dan majelis ilmu; kalender acara keagamaan aktif sepanjang tahun.</p></div>
+        <div class="card reveal" style="transition-delay:.15s"><h3>Ekonomi Lokal</h3><p>Pertanian jagung, garam rakyat, perikanan, dan perdagangan kecil-kecilan.</p></div>
+        <div class="card reveal" style="transition-delay:.2s"><h3>Arsitektur</h3><p>Rumah sederhana dengan teras lebar untuk berkumpul, pagar kayu, dan warna kontras.</p></div>
+        <div class="card reveal" style="transition-delay:.25s"><h3>Transportasi</h3><p>Akses via Jembatan Suramadu (dari Bangkalan) kemudian melintasi jalur tengah Pulau Madura.</p></div>
+      </div>
+    </section>
+
+    <section id="tips">
+      <h2 class="section-title reveal">Tips Kunjungan</h2>
+      <div class="grid cols-2">
+        <div class="card reveal">
+          <h3>Waktu Terbaik</h3>
+          <p>Musim kemarau awal–pertengahan saat langit cerah. Sore hari cocok untuk menikmati pantai dan kuliner.</p>
+          <ul class="list">
+            <li>Bawa topi, kacamata, dan air minum cukup.</li>
+            <li>Gunakan pakaian sopan saat ke tempat ibadah dan acara adat.</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="transition-delay:.05s">
+          <h3>Etika Lokal</h3>
+          <p>Hargai norma setempat, terutama saat memotret orang. Sapa dengan ramah; senyum membuka percakapan.</p>
+          <ul class="list">
+            <li>Tawar-menawar di pasar dilakukan dengan santun.</li>
+            <li>Jaga kebersihan pantai dan area publik.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="konflik">
+      <h2 class="section-title reveal">Konflik di Kabupaten Sampang</h2>
+      <p class="pill reveal" style="margin:6px 0 0;display:inline-block">Fokus: pemulihan sosial & dialog</p>
+      <p class="section-sub reveal" style="transition-delay:.05s">Beberapa peristiwa sosial pernah terjadi di Sampang, termasuk konflik berbasis perbedaan keyakinan dan sosial-ekonomi. Ringkasan berikut bersifat informatif untuk memahami konteks secara netral dan mendorong upaya damai.</p>
+      <div class="grid cols-3">
+        <div class="card reveal">
+          <h3>Latar Belakang</h3>
+          <p>Faktor penyebab umumnya meliputi dinamika identitas, kesenjangan informasi, ekonomi, dan pengaruh lokalitas pedesaan. Persepsi berbeda yang tidak tersalurkan dalam dialog dapat memicu ketegangan.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.05s">
+          <h3>Dampak</h3>
+          <ul class="list">
+            <li>Gangguan rasa aman sebagian warga dan aktivitas ekonomi.</li>
+            <li>Perpindahan sementara warga terdampak dan perlunya dukungan sosial.</li>
+            <li>Kerentanan fasilitas umum serta kebutuhan pemulihan sosial.</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="transition-delay:.1s">
+          <h3>Penanganan & Upaya Damai</h3>
+          <ul class="list">
+            <li>Fasilitasi dialog lintas tokoh masyarakat, agama, dan pemuda.</li>
+            <li>Pemulihan berbasis komunitas: pendidikan toleransi, layanan psikososial.</li>
+            <li>Penguatan ekonomi inklusif dan program kolaborasi warga.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card reveal" style="margin-top:12px;transition-delay:.15s">
+        <h3>Catatan</h3>
+        <p>Bagian ini disusun secara ringkas dan netral untuk tujuan edukasi umum. Untuk detail kebijakan atau data resmi, rujuk publikasi pemerintah daerah, lembaga riset, dan berita tepercaya.</p>
+      </div>
+
+      <div class="grid cols-3" style="margin-top:12px">
+        <div class="card reveal">
+          <h3>Inisiatif Perdamaian di Lapangan</h3>
+          <ul class="list">
+            <li>Forum rutin di desa/kelurahan sebagai ruang dengar antarwarga.</li>
+            <li>Program sahabat sekolah dan pesantren untuk literasi toleransi.</li>
+            <li>Gotong royong lintas RT/RW pada pemulihan fasilitas umum.</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="transition-delay:.05s">
+          <h3>Peran Pemangku Kepentingan</h3>
+          <ul class="list">
+            <li>Tokoh agama dan adat memediasi serta memberi teladan dialog.</li>
+            <li>Pemda/OPD menyediakan layanan bantuan hukum dan sosial.</li>
+            <li>Komunitas pemuda menggelar kegiatan kolaboratif kreatif.</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="transition-delay:.1s">
+          <h3>Keberlanjutan</h3>
+          <ul class="list">
+            <li>Pemetaan konflik lokal dan indikator dini untuk pencegahan.</li>
+            <li>Pelatihan fasilitator komunitas dan kader perdamaian.</li>
+            <li>Monitoring partisipatif serta publikasi praktik baik.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top:16px;">
+        <h3 style="display:flex;align-items:center;gap:8px">Kuis Singkat: Harmoni di Tempat Kerja & Komunitas <span class="pill" style="font-size:11px">Latihan</span></h3>
+        <p class="section-sub" style="margin:6px 0 12px;color:var(--muted)">Jawaban diisi berdasarkan praktik umum yang mendukung perdamaian sosial; relevan untuk konteks Sampang yang menjunjung nilai kekeluargaan, toleransi, dan dialog.</p>
+        <div class="table-wrap">
+          <table class="keren" style="font-size:14px">
+            <thead>
+              <tr>
+                <th style="text-align:center;width:46px">No</th>
+                <th style="text-align:left">Pernyataan</th>
+                <th style="text-align:center;width:90px">Benar</th>
+                <th style="text-align:center;width:90px">Salah</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align:center">1</td>
+                <td>Harmoni dalam keberagaman sangat penting untuk menciptakan lingkungan kerja yang inklusif dan produktif.</td>
+                <td style="text-align:center"><span class="badge true"><span class="icon">✔</span>Benar</span></td>
+                <td style="text-align:center"></td>
+              </tr>
+              <tr>
+                <td style="text-align:center">2</td>
+                <td>Keberagaman pekerjaan tidak berkontribusi pada penciptaan harmoni di lingkungan kerja.</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"><span class="badge false"><span class="icon">✘</span>Salah</span></td>
+              </tr>
+              <tr>
+                <td style="text-align:center">3</td>
+                <td>Menerapkan nilai harmoni dalam keberagaman dapat membantu mengurangi konflik dan meningkatkan produktivitas di lingkungan masyarakat dan lingkungan kerja.</td>
+                <td style="text-align:center"><span class="badge true"><span class="icon">✔</span>Benar</span></td>
+                <td style="text-align:center"></td>
+              </tr>
+              <tr>
+                <td style="text-align:center">4</td>
+                <td>Menciptakan harmoni dalam keberagaman merupakan tanggung jawab pimpinan di tempat kerja, bukan tanggung jawab karyawan.</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"><span class="badge false"><span class="icon">✘</span>Salah</span></td>
+              </tr>
+              <tr>
+                <td style="text-align:center">5</td>
+                <td>Toleransi dan harmoni dalam keberagaman adalah konsep yang sama dan dapat digunakan secara bergantian.</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"><span class="badge false"><span class="icon">✘</span>Salah</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:10px;color:var(--muted);font-size:12px">Catatan: Jawaban merujuk pada prinsip umum pembangunan perdamaian (peacebuilding) dan praktik kolaborasi komunitas yang juga relevan untuk konteks Sampang.</p>
+      </div>
+    </section>
+  </main>
+
+  <button id="backToTop" class="btn" style="position:fixed;right:16px;bottom:16px;z-index:50;opacity:0;transform:translateY(10px);transition:.3s;box-shadow:0 8px 24px rgba(2,6,23,.35)">↑ Ke Atas</button>
+
+  <footer>
+    <div class="container">© 2025 Sampang, Madura — Halaman informatif sederhana</div>
+  </footer>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      })
+    })
+
+    // Reveal on scroll (subtle)
+    const io = new IntersectionObserver((entries)=>{
+      for(const ent of entries){ if(ent.isIntersecting){ ent.target.classList.add('show'); io.unobserve(ent.target); } }
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Tiny dynamic accent on mouse move (parallax-like)
+    document.addEventListener('mousemove', (e)=>{
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      document.body.style.background = `radial-gradient(1200px 600px at ${x*100}% -10%, rgba(34,211,238,.15), transparent 60%),
+                                        radial-gradient(1000px 500px at 10% -20%, rgba(56,189,248,.18), transparent 60%),
+                                        var(--bg)`;
+      const hero = document.querySelector('.hero');
+      if(hero){ hero.style.transform = `translate3d(${(x-.5)*6}px, ${(y-.5)*4}px, 0)`; }
+    });
+
+    // Theme toggle removed per request (no light/dark mode)
+
+    // Back to top visibility
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', ()=>{
+      const show = window.scrollY > 600;
+      backToTop.style.opacity = show ? 1 : 0;
+      backToTop.style.transform = show ? 'translateY(0)' : 'translateY(10px)';
+    });
+    backToTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
+</body>
+</html>
